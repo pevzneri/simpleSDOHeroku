@@ -3,7 +3,8 @@ var router = express.Router();
 var path = require('path');
 
 var pg = require('pg');
-var conString = process.env.DATABASE_URL || 'postgres://cdegour:@localhost/sHoHealth';
+var conString = process.env.DATABASE_URL || 'postgres://loonmxuclziskv:9a7a408d9128cac9d7eb2a0058d77ad9d026db4bf872440653411f0da7f352e9@ec2-54-83-1-94.compute-1.amazonaws.com:5432/d8fa6l423b75o7
+';
 
 router.get('/', function(req, res, next){
 	res.sendFile(path.join(__dirname + '/../views/index.html'));
