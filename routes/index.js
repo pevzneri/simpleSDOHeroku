@@ -3,8 +3,7 @@ var router = express.Router();
 var path = require('path');
 
 var pg = require('pg');
-var conString = process.env.DATABASE_URL || 'postgres://cdegour:@localhost/sHoHealth'
-';
+var conString = process.env.DATABASE_URL || 'https://odata-us.heroku.com/odata/v4/fd37f45419c740ccbe90f52241461163';
 
 router.get('/', function(req, res, next){
 	res.sendFile(path.join(__dirname + '/../views/index.html'));
@@ -32,8 +31,5 @@ router.post('/newsletterAdd', function(req, res, next){
 			);
 		}
 	});
-});
-
-
-
-module.exports = router;
+})
+;
